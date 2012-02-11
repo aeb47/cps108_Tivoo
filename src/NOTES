@@ -1,0 +1,25 @@
+USE A LIBRARY TO PARSE XML, MORON
+
+DOM - Document Object Model
+SAX - Simple API for XML
+JDOM - "a Java-based document object model for XML files"
+
+XPath - an added bonus
+
+DOM: slow, loads entire file into memory and parses it
+SAX: parses the file in chunks, reads data and then throws it out
+JDOM: quicker, lighter-weight version of DOM, middle ground?
+
+**XPath: way of picking out a particular piece of XML data in your file (strongly recommended)
+
+
+
+LIBRARIES FOR DATES
+
+Convert human representation time to Epoch time
+Java's built-in Calendar class
+
+LIBRARIES FOR OUTPUTTING HTML
+
+gagawa
+Java Server Page (probably not idea for this project)
