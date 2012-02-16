@@ -1,26 +1,21 @@
+package calendar;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.List;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
-import org.joda.time.DateTime;
-
-import process.Parser;
-
-import calendar.*;
 
 import events.Event;
-import html.WriteEvents;
 
-public class main {
+public class ReadXMLFile {
 
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
-	public static void main(String[] args) throws IOException {
 
-		Parser parser = new Parser();
+    public static void main(String[] args) {
+
         SAXBuilder builder = new SAXBuilder();
         //Enter File here... either dukecal.xml or DukeBasketBall.xml
         File xmlFile = new File("dukecal.xml");
@@ -33,11 +28,8 @@ public class main {
             c= new DukeBasketBallCalendar( typeOfCalendar);
         }
         ArrayList <Event> events = new ArrayList<Event> ();
-        events = c.processCalendar(builder, xmlFile);
-        parser.setKeyWord("Duke");
-        events = parser.getEventsWithKeyWord(events);
-		WriteEvents writer = new WriteEvents();
-		writer.write(events);
-	}
-
+        events= c.processCalendar(builder, xmlFile);
+        
+    }
 }
+
