@@ -8,12 +8,12 @@ import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
 public class ReadXMLFileJDOM {
-	public ArrayList<String> read() {
+	public List<String> read() {
 
 		SAXBuilder builder = new SAXBuilder();
 		File xmlFile = new File("google.xml");
-		ArrayList<String> subjects = new ArrayList<String>();
-		ArrayList<String> locations = new ArrayList<String>();
+		List<String> subjects = new ArrayList<String>();
+		List<String> locations = new ArrayList<String>();
 		try {
 			Document document = (Document) builder.build(xmlFile);
 			Element rootNode = document.getRootElement();
@@ -28,7 +28,7 @@ public class ReadXMLFileJDOM {
 		} catch (JDOMException jdomex) {
 			System.out.println(jdomex.getMessage());
 		}
-		ArrayList<String> homeGames = new ArrayList<String>();
+		List<String> homeGames = new ArrayList<String>();
 		for (int i = 0; i < locations.size(); i++) {
 			if (locations.get(i).equals("Cameron Indoor Stadium")) {
 				homeGames.add(subjects.get(i));

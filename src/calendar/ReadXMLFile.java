@@ -23,9 +23,9 @@ public class ReadXMLFile {
         String typeOfCalendar= "Duke Calendar";
         //Enter filter word here
         String filterWord= "word";
-        Calendar c= new DukeCalendar(typeOfCalendar);
+        Calendar c= new DukeCalendar();
         if(typeOfCalendar.equals("Duke BasketBall Calendar")){
-            c= new DukeBasketBallCalendar( typeOfCalendar);
+            c= new DukeBasketBallCalendar();
         }
         ArrayList <Event> events = new ArrayList<Event> ();
         events= c.processCalendar(builder, xmlFile);

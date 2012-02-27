@@ -115,7 +115,6 @@ a:hover {
   *zoom: 1;
 }
 .row-footer{
-  margin-left: -20px;
   background-color: #dddddd;
 }
 .row:before, .row:after {
